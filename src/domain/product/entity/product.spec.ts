@@ -35,7 +35,7 @@ describe("Product unit tests", () => {
 
             const product = new Product("123", "product 1", -1)
 
-        }).toThrow("product: Price must be grater than 0")
+        }).toThrow("product: price must be greater than 0")
 
     })
 
@@ -44,7 +44,7 @@ describe("Product unit tests", () => {
 
             const product = new Product("", "", -1)
 
-        }).toThrow("product: Id is required, product: Name is required, product: Price must be grater than 0")
+        }).toThrow("product: Id is required, product: Name is required, product: price must be greater than 0")
 
     })
 

@@ -51,7 +51,7 @@ describe('Unit Test create Product use case', () => {
         input.name = "Product 1"
         input.price = -1
 
-        expect(usecase.execute(input)).rejects.toThrow("Price must be grater than 0")
+        expect(usecase.execute(input)).rejects.toThrow("price must be greater than 0")
 
     })
 })

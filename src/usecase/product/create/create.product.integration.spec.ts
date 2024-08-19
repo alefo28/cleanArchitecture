@@ -70,7 +70,7 @@ describe("Test Integration create Product use case", () => {
             price: -1
         }
 
-        expect(usecase.execute(input)).rejects.toThrow("Price must be grater than 0")
+        expect(usecase.execute(input)).rejects.toThrow("price must be greater than 0")
 
     })
 
