@@ -8,7 +8,7 @@ describe("Product unit tests", () => {
 
             const product = new Product("", "product 1", 100)
 
-        }).toThrow("Id is required")
+        }).toThrow("product: Id is required")
 
     })
 
@@ -17,7 +17,16 @@ describe("Product unit tests", () => {
 
             const product = new Product("123", "", 100)
 
-        }).toThrow("Name is required")
+        }).toThrow("product: Name is required")
+
+    })
+
+    it("Should throw error when id and name is empty", () => {
+        expect(() => {
+
+            const product = new Product("", "", 100)
+
+        }).toThrow("product: Id is required, product: Name is required")
 
     })
 
@@ -26,7 +35,16 @@ describe("Product unit tests", () => {
 
             const product = new Product("123", "product 1", -1)
 
-        }).toThrow("Price must be grater than 0")
+        }).toThrow("product: Price must be grater than 0")
+
+    })
+
+    it("Should throw error when id and name is empty and price is less than '", () => {
+        expect(() => {
+
+            const product = new Product("", "", -1)
+
+        }).toThrow("product: Id is required, product: Name is required, product: Price must be grater than 0")
 
     })
 
